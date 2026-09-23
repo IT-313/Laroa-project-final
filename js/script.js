@@ -1,97 +1,94 @@
-// Smooth Scrolling
-document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
+document.addEventListener("DOMContentLoaded", function () {
+  /* ================= ADD TO CART ================= */
 
-        const target = document.querySelector(this.getAttribute('href'));
+  const cartButtons = document.querySelectorAll(".add-cart");
 
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
+  cartButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      const productName = button.getAttribute("data-product");
+
+      alert(productName + " has been added to your cart.");
     });
-});
+  });
 
-// Sticky Header Shadow
-const header = document.querySelector("header");
+  /* ================= NEWSLETTER ================= */
 
-window.addEventListener("scroll", function () {
-    if (window.scrollY > 50) {
-        header.style.boxShadow = "0 3px 10px rgba(0,0,0,0.2)";
-    } else {
-        header.style.boxShadow = "none";
-    }
-});
+  const newsletterForm = document.getElementById("newsletterForm");
 
-// Newsletter Form
-const newsletter = document.querySelector(".newsletter form");
+  if (newsletterForm) {
+    newsletterForm.addEventListener("submit", function (event) {
+      event.preventDefault();
 
-if (newsletter) {
-    newsletter.addEventListener("submit", function (e) {
-        e.preventDefault();
+      const email = document.getElementById("newsletterEmail").value;
 
-        const email = newsletter.querySelector("input").value;
+      alert("Thank you for subscribing, " + email + "!");
 
-        if (email === "") {
-            alert("Please enter your email.");
-        } else {
-            alert("Thank you for subscribing!");
-            newsletter.reset();
-        }
+      newsletterForm.reset();
     });
-}
+  }
 
-// Contact Form
-const contactForm = document.querySelector(".contact-form");
+  /* ================= CONTACT FORM ================= */
 
-if (contactForm) {
-    contactForm.addEventListener("submit", function (e) {
-        e.preventDefault();
+  const contactForm = document.getElementById("contactForm");
 
-        const name = contactForm.querySelector("input[type='text']").value;
-        const email = contactForm.querySelector("input[type='email']").value;
-        const message = contactForm.querySelector("textarea").value;
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault();
 
-        if (name === "" || email === "" || message === "") {
-            alert("Please complete all required fields.");
-        } else {
-            alert("Your message has been sent successfully!");
-            contactForm.reset();
-        }
+      const name = document.getElementById("fullName").value;
+
+      alert("Thank you, " + name + "! Your message has been sent.");
+
+      contactForm.reset();
     });
-}
+  }
 
-// Back to Top Button
-const topBtn = document.createElement("button");
-topBtn.innerHTML = "↑";
-topBtn.id = "topBtn";
-document.body.appendChild(topBtn);
+  /* ================= MOBILE NAVBAR ================= */
 
-topBtn.style.position = "fixed";
-topBtn.style.bottom = "20px";
-topBtn.style.right = "20px";
-topBtn.style.width = "45px";
-topBtn.style.height = "45px";
-topBtn.style.border = "none";
-topBtn.style.borderRadius = "50%";
-topBtn.style.background = "#d4af37";
-topBtn.style.color = "#000";
-topBtn.style.fontSize = "20px";
-topBtn.style.cursor = "pointer";
-topBtn.style.display = "none";
+  const navbarLinks = document.querySelectorAll(".navbar-collapse .nav-link");
 
-window.addEventListener("scroll", function () {
-    if (window.scrollY > 300) {
-        topBtn.style.display = "block";
-    } else {
-        topBtn.style.display = "none";
-    }
-});
+  const navbarCollapse = document.querySelector(".navbar-collapse");
 
-topBtn.addEventListener("click", function () {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
+  navbarLinks.forEach(function (link) {
+    link.addEventListener("click", function () {
+      if (navbarCollapse.classList.contains("show")) {
+        const navbarButton = document.querySelector(".navbar-toggler");
+
+        navbarButton.click();
+      }
     });
+  });
+
+  /* ================= ACTIVE NAVBAR LINK ================= */
+
+  const sections = document.querySelectorAll("section[id]");
+
+  const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+  window.addEventListener("scroll", function () {
+    let currentSection = "";
+
+    sections.forEach(function (section) {
+      const sectionTop = section.offsetTop - 150;
+
+      const sectionHeight = section.offsetHeight;
+
+      if (
+        window.scrollY >= sectionTop &&
+        window.scrollY < sectionTop + sectionHeight
+      ) {
+        currentSection = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach(function (link) {
+      link.classList.remove("active");
+
+      const linkTarget = link.getAttribute("href");
+
+      if (linkTarget === "#" + currentSection) {
+        link.classList.add("active");
+      }
+    });
+  });
 });
