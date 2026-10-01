@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  /* ================= ADD TO CART ================= */
-
   const cartButtons = document.querySelectorAll(".add-cart");
 
   cartButtons.forEach(function (button) {
@@ -10,8 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
       alert(productName + " has been added to your cart.");
     });
   });
-
-  /* ================= NEWSLETTER ================= */
 
   const newsletterForm = document.getElementById("newsletterForm");
 
@@ -27,8 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  /* ================= CONTACT FORM ================= */
-
   const contactForm = document.getElementById("contactForm");
 
   if (contactForm) {
@@ -43,8 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  /* ================= MOBILE NAVBAR ================= */
-
   const navbarLinks = document.querySelectorAll(".navbar-collapse .nav-link");
 
   const navbarCollapse = document.querySelector(".navbar-collapse");
@@ -58,8 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-
-  /* ================= ACTIVE NAVBAR LINK ================= */
 
   const sections = document.querySelectorAll("section[id]");
 

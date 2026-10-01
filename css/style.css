@@ -14,8 +14,6 @@ body {
     line-height: 1.6;
 }
 
-/* ================= NAVBAR ================= */
-
 .navbar-brand {
     color: #111;
 }
@@ -29,8 +27,6 @@ body {
     color: #d4af37 !important;
 }
 
-
-/* ================= BUTTONS ================= */
 
 .btn-dark {
     background: #d4af37 !important;
@@ -56,8 +52,6 @@ body {
     border-color: #111 !important;
 }
 
-
-/* ================= HERO ================= */
 
 .hero {
     min-height: 90vh;
@@ -94,8 +88,6 @@ body {
 }
 
 
-/* ================= SECTIONS ================= */
-
 section {
     padding: 70px 0;
 }
@@ -109,8 +101,6 @@ section {
     margin-bottom: 10px;
 }
 
-
-/* ================= FEATURES ================= */
 
 .feature {
     background: #fff;
@@ -128,8 +118,6 @@ section {
     margin-bottom: 15px;
 }
 
-
-/* ================= COLLECTIONS ================= */
 
 .collection-card {
     background: #222;
@@ -154,8 +142,6 @@ section {
 }
 
 
-/* ================= ABOUT ================= */
-
 .about-image {
     height: 450px;
 
@@ -173,8 +159,6 @@ section {
     display: block;
 }
 
-
-/* ================= PRODUCTS ================= */
 
 .product-card {
     background: #fff;
@@ -211,8 +195,6 @@ section {
     color: #d4af37;
 }
 
-
-/* ================= SERVICES ================= */
 
 .services-section {
     padding: 70px 0;
@@ -261,8 +243,6 @@ section {
 }
 
 
-/* ================= WHY US ================= */
-
 .why-card {
     background: #fff;
 
@@ -282,8 +262,6 @@ section {
 }
 
 
-/* ================= TESTIMONIALS ================= */
-
 .review {
     background: #fff;
 
@@ -298,8 +276,6 @@ section {
     margin-bottom: 15px;
 }
 
-
-/* ================= NEWSLETTER ================= */
 
 .newsletter {
     background: #111;
@@ -322,8 +298,6 @@ section {
 }
 
 
-/* ================= CONTACT ================= */
-
 .contact-info p {
     margin-bottom: 15px;
 }
@@ -341,8 +315,6 @@ section {
     padding: 12px;
 }
 
-
-/* ================= FOOTER ================= */
 
 footer {
     background: #111;
@@ -370,8 +342,6 @@ footer a:hover {
     gap: 15px;
 }
 
-
-/* ================= MOBILE ================= */
 
 @media (max-width: 768px) {
 
@@ -403,8 +373,6 @@ footer a:hover {
 
 }
 
-
-/* ================= SMALL MOBILE ================= */
 
 @media (max-width: 576px) {
 
