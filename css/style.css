@@ -421,3 +421,25 @@ footer a:hover {
     }
 
 }
+/* Tablet Responsive Theme */
+@media screen and (max-width: 768px) {
+    nav.navbar.bg-white {
+        --bs-bg-opacity: 1;
+        background-color: #8364089e !important;
+    }
+    .navbar-brand {
+    color: #fff !important;
+    }
+}
+
+
+/* Small Phone Responsive Theme */
+@media screen and (max-width: 375px) {
+    nav.navbar.bg-white {
+        --bs-bg-opacity: 1;
+        background-color: #8364089e !important;
+    }
+    .navbar-brand {
+    color: #fff !important;
+    }
+}
