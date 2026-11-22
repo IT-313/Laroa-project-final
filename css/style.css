@@ -427,8 +427,24 @@ footer a:hover {
         --bs-bg-opacity: 1;
         background-color: #8364089e !important;
     }
+     .nav-link {
+    color: #fff !important;
+    transition: 0.3s;
+    }
     .navbar-brand {
     color: #fff !important;
+    }
+    .collection-card {
+    background: #d4af37;
+    color: #212529;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+    }
+    footer {
+    background: #b8962e;
+    color: #fff;
     }
 }
 
@@ -439,7 +455,24 @@ footer a:hover {
         --bs-bg-opacity: 1;
         background-color: #8364089e !important;
     }
+    .nav-link {
+    color: #fff !important;
+    transition: 0.3s;
+    }
     .navbar-brand {
     color: #fff !important;
     }
+    .collection-card {
+    background: #d4af37;
+    color: #212529;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+    }
+    footer {
+    background: #b8962e;
+    color: #fff;
+    }
+    
 }
